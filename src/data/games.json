@@ -1,0 +1,66 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "description": "Join the numbers and get to the 2048 tile! A minimalist puzzle game that's easy to play and hard to master.",
+    "category": "Puzzle",
+    "iframeUrl": "https://play2048.co/",
+    "thumbnail": "https://play2048.co/meta/apple-touch-icon.png"
+  },
+  {
+    "id": "tetris",
+    "title": "Tetris",
+    "description": "The world's most popular block-stacking puzzle game. Rotate and place pieces to clear lines.",
+    "category": "Arcade",
+    "iframeUrl": "https://tetris.com/play-tetris",
+    "thumbnail": "https://tetris.com/img/tetris-logo.png"
+  },
+  {
+    "id": "snake",
+    "title": "Snake",
+    "description": "Classic snake game. Eat the food, grow longer, don't hit the walls. A simple yet addictive challenge.",
+    "category": "Arcade",
+    "iframeUrl": "https://poki.com/en/g/snake",
+    "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=70,width=262,height=262,fit=cover,g=0.5x0.5,f=auto/b80f1d19888941ce53a985d1d64f02f7.png"
+  },
+  {
+    "id": "chess",
+    "title": "Chess",
+    "description": "The ultimate game of strategy. Play against the computer or friends in this 64-square battlefield.",
+    "category": "Strategy",
+    "iframeUrl": "https://www.chess.com/play/online",
+    "thumbnail": "https://www.chess.com/bundles/web/images/offline-play/standardboard.1235b2e.png"
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "description": "Navigate a ball down a treacherous, ever-changing neon slope. Speed and agility are key in this high-octane run.",
+    "category": "Action",
+    "iframeUrl": "https://slopegame.online/",
+    "thumbnail": "https://slope-game.github.io/logo.png"
+  },
+  {
+    "id": "cookie-clicker",
+    "title": "Cookie Clicker",
+    "description": "The original idle game about clicking cookies. Bake millions of cookies to buy grandmas, farms, and space stations.",
+    "category": "Idle",
+    "iframeUrl": "https://orteil.dashnet.org/cookieclicker/",
+    "thumbnail": "https://orteil.dashnet.org/cookieclicker/img/cookie.png"
+  },
+  {
+    "id": "minecraft-classic",
+    "title": "Minecraft Classic",
+    "description": "The original creative experience of Minecraft. Build anything you can imagine with 32 blocks in your browser.",
+    "category": "Creative",
+    "iframeUrl": "https://classic.minecraft.net/",
+    "thumbnail": "https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.png"
+  },
+  {
+    "id": "flappy-bird",
+    "title": "Flappy Bird",
+    "description": "The legendary frustrating game of flapping through pipes. How high can your score go?",
+    "category": "Arcade",
+    "iframeUrl": "https://flappybird.io/",
+    "thumbnail": "https://flappybird.io/img/logo.png"
+  }
+]
