@@ -20,7 +20,7 @@
     "title": "Snake",
     "description": "Classic snake game. Eat the food, grow longer, don't hit the walls. A simple yet addictive challenge.",
     "category": "Arcade",
-    "iframeUrl": "https://poki.com/en/g/snake",
+    "iframeUrl": "https://www.google.com/fbx?fbx=snake_arcade",
     "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=70,width=262,height=262,fit=cover,g=0.5x0.5,f=auto/b80f1d19888941ce53a985d1d64f02f7.png"
   },
   {
@@ -44,7 +44,7 @@
     "title": "Cookie Clicker",
     "description": "The original idle game about clicking cookies. Bake millions of cookies to buy grandmas, farms, and space stations.",
     "category": "Idle",
-    "iframeUrl": "https://orteil.dashnet.org/cookieclicker/",
+    "iframeUrl": "https://pisaucer.github.io/boredhtml/games/cookieclicker/",
     "thumbnail": "https://orteil.dashnet.org/cookieclicker/img/cookie.png"
   },
   {
@@ -62,5 +62,21 @@
     "category": "Arcade",
     "iframeUrl": "https://flappybird.io/",
     "thumbnail": "https://flappybird.io/img/logo.png"
+  },
+  {
+    "id": "soccer-bros",
+    "title": "Soccer Bros",
+    "description": "Fast-paced soccer action with quirky characters and smooth gameplay. Score goals and dominate the pitch!",
+    "category": "Sports",
+    "iframeUrl": "https://soccerbros.gg/",
+    "thumbnail": "https://bluewizard.com/wp-content/uploads/2024/02/SoccerBros2-Logo.png"
+  },
+  {
+    "id": "baseball-bros",
+    "title": "Baseball Bros",
+    "description": "Step up to the plate and swing for the fences! A fun, fast-paced baseball game with multiple teams and modes.",
+    "category": "Sports",
+    "iframeUrl": "https://baseballbros.io/",
+    "thumbnail": "https://baseballbros.io/img/thumbnail.jpg"
   }
 ]

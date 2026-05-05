@@ -7,6 +7,10 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedGame, setSelectedGame] = useState(null);
+  const [stealthMode, setStealthMode] = useState({
+    title: "Unblocked Hub",
+    favicon: "/vite.svg"
+  });
 
   const toggleFullscreen = () => {
     const iframe = document.querySelector("iframe");
@@ -15,6 +19,45 @@ export default function App() {
         iframe.requestFullscreen();
       }
     }
+  };
+
+  const cloakSite = () => {
+    const url = window.location.href;
+    const win = window.open();
+    if (!win) {
+      alert("Please allow popups for cloaking to work.");
+      return;
+    }
+    win.document.body.style.margin = "0";
+    win.document.body.style.height = "100vh";
+    const iframe = win.document.createElement("iframe");
+    iframe.style.border = "none";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.margin = "0";
+    iframe.src = url;
+    win.document.body.appendChild(iframe);
+    window.location.replace("https://google.com");
+  };
+
+  const applyStealth = (type) => {
+    const presets = {
+      classroom: { title: "Classes", icon: "https://ssl.gstatic.com/classroom/favicon.png" },
+      google: { title: "Google", icon: "https://www.google.com/favicon.ico" },
+      drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" },
+      reset: { title: "Unblocked Hub", icon: "/vite.svg" }
+    };
+
+    const preset = presets[type];
+    document.title = preset.title;
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = preset.icon;
+    setStealthMode(preset);
   };
 
   const categories = useMemo(() => {
@@ -39,7 +82,7 @@ export default function App() {
       <header className="flex items-end justify-between px-10 pt-10 pb-6 border-b border-border bg-primary z-20 sticky top-0">
         <div className="cursor-pointer" onClick={() => setSelectedGame(null)}>
           <h1 className="text-8xl font-black tracking-tighter leading-none m-0 flex items-baseline">
-            UNBLOCKED<span className="text-accent">.</span>HUB
+            HAZSM'S<span className="text-accent">.</span>GAMES
           </h1>
           <p className="text-zinc-500 font-mono text-xs tracking-[0.3em] uppercase mt-4">
             System Status: Online // {new Date().toLocaleDateString().replace(/\//g, '.')}
@@ -307,11 +350,35 @@ export default function App() {
             Region: GLOBAL-AIS-01
           </span>
         </div>
-        <div className="flex gap-1">
-          <div className="w-8 h-8 bg-black flex items-center justify-center text-white text-xs hover:bg-accent cursor-pointer transition-colors">A</div>
-          <div className="w-8 h-8 bg-black flex items-center justify-center text-white text-xs underline underline-offset-2 hover:bg-accent cursor-pointer transition-colors">B</div>
-          <div className="w-8 h-8 bg-black flex items-center justify-center text-white text-xs hover:bg-accent cursor-pointer transition-colors">X</div>
-          <div className="w-8 h-8 bg-black flex items-center justify-center text-white text-xs hover:bg-accent cursor-pointer transition-colors">Y</div>
+        <div className="flex gap-1 group/stealth relative">
+          <div 
+            onClick={() => applyStealth('classroom')}
+            className="w-8 h-8 bg-black flex items-center justify-center text-white text-[10px] hover:bg-accent cursor-pointer transition-colors" 
+            title="SPOOF: CLASSROOM"
+          >
+            CLS
+          </div>
+          <div 
+            onClick={() => applyStealth('drive')}
+            className="w-8 h-8 bg-black flex items-center justify-center text-white text-[10px] underline underline-offset-2 hover:bg-accent cursor-pointer transition-colors"
+            title="SPOOF: DRIVE"
+          >
+            DRV
+          </div>
+          <div 
+            onClick={cloakSite}
+            className="w-8 h-8 bg-accent flex items-center justify-center text-white text-[10px] hover:bg-white hover:text-black cursor-pointer transition-colors font-black"
+            title="INITIATE: ABOUT_BLANK_CLOAK"
+          >
+            CLOAK
+          </div>
+          <div 
+            onClick={() => applyStealth('reset')}
+            className="w-8 h-8 bg-black flex items-center justify-center text-white text-[10px] hover:bg-accent cursor-pointer transition-colors"
+            title="RESET PROTOCOL"
+          >
+            RST
+          </div>
         </div>
         <div className="hidden md:block text-[10px] uppercase tracking-widest italic">
           Build 5.5.02 // Unblocked Engine
